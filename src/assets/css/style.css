@@ -4,7 +4,7 @@
 
 .editor {
     position: relative;
-    max-width: 30rem;
+    max-width: 50rem;
     margin: 0 auto 5rem auto;
 }
 .editor__content {
@@ -65,7 +65,7 @@
 }
 .editor__content table td, .editor__content table th {
     min-width: 1em;
-    border: 2px solid grey;
+    border: 2px solid gray;
     padding: 3px 5px;
     vertical-align: top;
     box-sizing: border-box;
@@ -108,51 +108,43 @@
     cursor: col-resize;
 }
 
-.menububble {
-    position: absolute;
-    display: flex;
-    z-index: 20;
-    background: black;
-    border-radius: 5px;
-    padding: 0.3rem;
-    margin-bottom: 0.5rem;
-    transform: translateX(-50%);
+.menubar {
+    margin-bottom: 1rem;
+    transition: visibility 0.2s 0.4s, opacity 0.2s 0.4s;
+  }
+  .menubar.is-hidden {
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.2s, visibility 0.2s;
-}
-.menububble.is-active {
-    opacity: 1;
+  }
+  .menubar.is-focused {
     visibility: visible;
-}
-.menububble__button {
+    opacity: 1;
+    transition: visibility 0.2s, opacity 0.2s;
+  }
+  .menubar__button {
+    font-weight: bold;
     display: inline-flex;
     background: transparent;
     border: 0;
-    color: white;
+    color: black;
     padding: 0.2rem 0.5rem;
     margin-right: 0.2rem;
     border-radius: 3px;
     cursor: pointer;
-}
-.menububble__button:last-child {
-    margin-right: 0;
-}
-.menububble__button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-.menububble__button.is-active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-.menububble__form {
-    display: flex;
-    align-items: center;
-}
-.menububble__input {
-    font: inherit;
-    border: none;
-    background: transparent;
-    color: white;
+  }
+  .menubar__button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .menubar__button.is-active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .menubar span.menubar__button {
+    font-size: 13.3333px;
+  }
+
+h1 {
+    @apply text-2xl;
+    @apply font-bold;
 }
 
 h2 {
@@ -160,6 +152,100 @@ h2 {
     @apply font-semibold;
 }
 
+h3 {
+    @apply text-lg;
+    @apply font-semibold;
+}
+
 ul {
     @apply list-disc;
 }
+
+.ProseMirror:focus {
+    outline: none;
+}
+
+ul[data-type="todo_list"] {
+    padding-left: 0;
+}
+li[data-type="todo_item"] {
+    display: flex;
+    flex-direction: row;
+}
+.todo-checkbox {
+    border: 2px solid black;
+    height: 0.9em;
+    width: 0.9em;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-top: 0.3rem;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    border-radius: 0.2em;
+    background-color: transparent;
+    transition: 0.4s background;
+}
+.todo-content {
+    flex: 1;
+}
+.todo-content > p:last-of-type {
+    margin-bottom: 0;
+}
+.todo-content > ul[data-type="todo_list"] {
+    margin: 0.5rem 0;
+}
+li[data-done="true"] > .todo-content > p {
+    text-decoration: line-through;
+}
+li[data-done="true"] > .todo-checkbox {
+    background-color: black;
+}
+li[data-done="false"] {
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  ol,
+  pre,
+  blockquote {
+    margin: 1rem 0;
+  }
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  p:first-child,
+  ul:first-child,
+  ol:first-child,
+  pre:first-child,
+  blockquote:first-child {
+    margin-top: 0;
+  }
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  p:last-child,
+  ul:last-child,
+  ol:last-child,
+  pre:last-child,
+  blockquote:last-child {
+    margin-bottom: 0;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    line-height: 1.3;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
