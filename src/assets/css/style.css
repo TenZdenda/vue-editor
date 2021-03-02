@@ -207,45 +207,45 @@ li[data-done="false"] {
 
 a {
     color: inherit;
-  }
-  
-  h1,
-  h2,
-  h3,
-  p,
-  ul,
-  ol,
-  pre,
-  blockquote {
-    margin: 1rem 0;
-  }
-  h1:first-child,
-  h2:first-child,
-  h3:first-child,
-  p:first-child,
-  ul:first-child,
-  ol:first-child,
-  pre:first-child,
-  blockquote:first-child {
-    margin-top: 0;
-  }
-  h1:last-child,
-  h2:last-child,
-  h3:last-child,
-  p:last-child,
-  ul:last-child,
-  ol:last-child,
-  pre:last-child,
-  blockquote:last-child {
-    margin-bottom: 0;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    line-height: 1.3;
-  }
+}
 
-  ol {
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+pre,
+blockquote {
+    margin: 1rem 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+p:first-child,
+ul:first-child,
+ol:first-child,
+pre:first-child,
+blockquote:first-child {
+    margin-top: 0;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+pre:last-child,
+blockquote:last-child {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+ol {
     list-style-type: decimal;
-  }
+}

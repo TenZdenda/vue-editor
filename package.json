@@ -11,13 +11,16 @@
     "@iconscout/vue-unicons-solid": "^0.0.2",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "core-js": "^3.6.5",
+    "fuse.js": "^6.4.6",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "tippy.js": "^6.3.1",
     "tiptap": "^1.32.1",
     "tiptap-extensions": "^1.35.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "xregexp": "^5.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
